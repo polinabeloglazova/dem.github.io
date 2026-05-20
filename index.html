@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Журнал учебных материалов</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --date-color: #7f8c8d;
+            --border-radius: 8px;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .entry {
+            background-color: var(--card-bg);
+            border-left: 5px solid var(--accent-color);
+            margin-bottom: 25px;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease;
+        }
+
+        .entry:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .date-badge {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .content-block {
+            margin-top: 10px;
+        }
+
+        /* Стили для ссылок-файлов */
+        .file-link {
+            display: inline-flex;
+            align-items: center;
+            background-color: #eef2f5;
+            color: var(--primary-color);
+            padding: 8px 15px;
+            margin: 5px 5px 5px 0;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            border: 1px solid #d1d9e6;
+            transition: all 0.2s;
+        }
+
+        .file-link:hover {
+            background-color: var(--accent-color);
+            color: white;
+            border-color: var(--accent-color);
+        }
+
+        .file-link::before {
+            content: "📎 ";
+            margin-right: 5px;
+        }
+
+        /* Стили для кода и логов */
+        pre, code {
+            background-color: #282c34;
+            color: #abb2bf;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 0.9rem;
+            display: block;
+            margin: 10px 0;
+        }
+
+        .log-output {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            margin: 10px 0;
+        }
+
+        .highlight {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+
+        .success {
+            color: #27ae60;
+            font-weight: bold;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin: 10px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .footer-links {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background: white;
+            border-radius: var(--border-radius);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Журнал учебных материалов</h1>
+        <p>Архив заданий, презентаций и результатов тестирования</p>
+    </header>
+
+    <!-- МАЙ -->
+    <div class="entry">
+        <span class="date-badge">20 мая 2026</span>
+        <div class="content-block">
+            <a href="Табличный процессор1.ods" class="file-link">Табличный процессор (.ods)</a>
+        </div>
+    </div>
+
+    <div class="entry">
+        <span class="date-badge">16 мая 2026</span>
+        <div class="content-block">
+            <a href="Программирование.pptx" class="file-link">Презентация: Программирование</a>
+        </div>
+    </div>
+
+    <div class="entry">
+        <span class="date-badge">13 мая 2026</span>
+        <div class="content-block">
+            <a href="Диаграмма.xlsx" class="file-link">Диаграмма (.xlsx)</a>
+        </div>
+    </div>
+
+    <div class="entry">
+        <span class="date-badge">12 мая 2026</span>
+        <div class="content-block">
+            <a href="двоичная система.xlsx" class="file-link">Двоичная система (.xlsx)</a>
+        </div>
+    </div>
+
+    <div class="entry">
+        <span class="date-badge">6 мая 2026</span>
+        <div class="content-block">
+            <a href="Кроссворд 9 мая.docx" class="file-link">Кроссворд "9 мая"</a>
+            <br>
+            <img src="istockphoto-1147397927-1024x1024.jpg" alt="Георгиевская лента">
+        </div>
+    </div>
+
+    <div class="entry">
+        <span class="date-badge">4 мая 2026</span>
+        <div class="content-block">
+            <a href="Таблица0405.xlsx" class="file-link">Таблица 04.05</a>
+        </div>
+    </div>
+
+    <!-- АПРЕЛЬ -->
+    <div class="entry">
+        <span class="date-badge">29 апреля 2026</span>
+        <div class="content-block">
+            <a href="Таблица 2.ods" class="file-link">Таблица 2</a>
+        </div>
+    </div>
+
+    <div class="entry">
+        <span class="date-badge">17 апреля 2026</span>
+        <div class="content-block">
+            <a href="Табличный процессор1.ods" class="file-link">Табличный процессор 1</a>
+            <p>Тема: Основы работы с электронными таблицами.</p>
+        </div>
+    </div>
+
+    <div class="entry">
+        <span class="date-badge">10 апреля 2026</span>
+        <div class="content-block">
+            <h3>Схемы баз данных (Draw.io)</h3>
+            <a href="BD12.drawio.png" class="file-link">BD12 Схема</a>
+            <a href="BD11.drawio.png" class="file-link">BD11 Схема</a>
+        </div>
+    </div>
+
+    <div class="entry">
+        <span class="date-badge">8 апреля 2026</span>
+        <div class="content-block">
+            <h3>Моделирование травм и процессов</h3>
+            <a href="travma.drawio.png" class="file-link">Схема травмы</a>
+            <a href="travma2.drawio.png" class="file-link">Схема травмы 2</a>
+        </div>
+    </div>
+
+    <div class="entry">
+        <span class="date-badge">6 апреля 2026</span>
+        <div class="content-block">
+            <a href="vrach.drawio.png" class="file-link">Схема "Врач"</a>
+        </div>
+    </div>
+
+    <div class="entry">
+        <span class="date-badge">1 апреля 2026</span>
+        <div class="content-block">
+            <a href="drawio.png" class="file-link">Общая схема формата</a>
+            
+            <h4>Структуры данных в Python:</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Тип</th>
+                        <th>Пример доступа</th>
+                        <th>Когда использовать</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>list[dict]</code></td>
+                        <td><code>patients[0]["name"]</code></td>
+                        <td>Перебор, JSON API</td>
+                    </tr>
+                    <tr>
+                        <td><code>list[tuple]</code></td>
+                        <td><code>patients[0][1]</code></td>
+                        <td>Табличные данные</td>
+                    </tr>
+                    <tr>
+                        <td><code>dict</code></td>
+                        <td><code>patients["+7926A"]["name"]</code></td>
+                        <td>Быстрый поиск по ID</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- МАРТ -->
+    <div class="entry">
+        <span class="date-badge">28 марта 2026</span>
+        <div class="content-block">
+            <h3>Алгоритм персептрона</h3>
+            <img src="images/perceptron.png" alt="Схема обучения персептрона" style="max-width: 600px;">
+        </div>
+    </div>
+
+    <div class="entry">
+        <span class="date-badge">23 марта 2026</span>
+        <div class="content-block">
+            <h4>Результаты обучения нейросети:</h4>
+            <div class="log-output">
+Ошибка на обучении (MSE): 0.020601898887243373
+Ошибка на тесте (MSE):    0.029389917283117156
+
+Ошибка на обучении (MSE): 0.00426203027818327
+Ошибка на тесте (MSE):    0.003934039261960047
+            </div>
+            <p><em>Примечание: Алгоритм нейросети не интерпретируем на человеческом уровне ("черный ящик").</em></p>
+        </div>
+    </div>
+
+    <div class="entry">
+        <span class="date-badge">21 марта 2026</span>
+        <div class="content-block">
+            <p><strong>ТОЧНОСТЬ МОДЕЛИ (Accuracy):</strong> <span class="success">1.0000 (100.00%)</span></p>
+            <p>Loss: 0.69</p>
+        </div>
+    </div>
+
+    <div class="entry">
+        <span class="date-badge">18 марта 2026</span>
+        <div class="content-block">
+            <p>Студент занимался: <strong>5 часов</strong></p>
+            <p>Прогноз баллов: <strong>55.00</strong></p>
+        </div>
+    </div>
+
+    <!-- ФЕВРАЛЬ -->
+    <div class="entry">
+        <span class="date-badge">7 марта 2026</span>
+        <div class="content-block">
+            <a href="Project/Праздники_с_птичками.pptx" class="file-link">Праздничная Презентация!</a>
+        </div>
+    </div>
+
+    <div class="entry">
+        <span class="date-badge">14 февраля 2026</span>
+        <div class="content-block">
+            <h4>Результаты классификации изображений:</h4>
+            
+            <p><strong>Изображение 1 (Инструмент):</strong></p>
+            <div class="log-output">
+acoustic guitar:           99.97%
+electric guitar:            0.02%
+banjo:                      0.00%
+            </div>
+
+            <p><strong>Изображение 2 (Собака):</strong></p>
+            <div class="log-output">
+Beagle:                    74.27%
+Treeing Walker Coonhound:  10.90%
+English foxhound:           8.69%
+            </div>
+
+            <p><strong>Изображение 3 (Обувь):</strong></p>
+            <div class="log-output">
+running shoe:              99.45%
+shoe store:                 0.27%
+clogs:                      0.15%
+            </div>
+        </div>
+    </div>
+
+    <div class="entry">
+        <span class="date-badge">16 февраля 2026</span>
+        <div class="content-block">
+            <h4>Работа чат-бота (FAQ Retrieval):</h4>
+            
+            <p><strong>Запрос 1:</strong> "Сколько ждать мой заказ?"</p>
+            <div class="log-output">
+Найден FAQ-вопрос: Как быстро доставляется заказ? (sim=0.706)
+Ответ бота: Наш стандартный срок доставки — 3–5 рабочих дней.
+            </div>
+
+            <p><strong>Запрос 2:</strong> "Как оплатить заказ?"</p>
+            <div class="log-output">
+Найден FAQ-вопрос: Как оплатить заказ? (sim=0.941)
+Ответ бота: Оплатить заказ можно банковской картой, наличными курьеру или через онлайн-платеж.
+            </div>
+        </div>
+    </div>
+
+    <div class="entry">
+        <span class="date-badge">18 февраля 2026</span>
+        <div class="content-block">
+            <h4>Дешифровка сообщения (Python):</h4>
+            <pre><code># Чтение из файла и расшифровка
+with open(r"/home/user/2025/201с/Enigme1.txt") as f:
+     encoded_data = f.read().strip()
+
+decoded_message = ''.join(chr(int(code)) for code in encoded_data.split())
+print(decoded_message)</code></pre>
+            
+            <blockquote>
+                "У каждого поколения есть свой философ, писатель или художник, который захватывает и воплощает в себе идею времени... У нашего поколения есть философ. Он не художник и не писатель. Он программист."
+            </blockquote>
+            
+            <hr>
+            <h4>Решение задачи SEND + MORE = MONEY</h4>
+            <p><strong>Соответствие букв и цифр:</strong></p>
+            <ul>
+                <li>S = 9, E = 5, N = 6, D = 7</li>
+                <li>M = 1, O = 0, R = 8, Y = 2</li>
+            </ul>
+            <div class="log-output">
+  9567  (SEND)
++ 1085  (MORE)
+-------------------------
+ 10652  (MONEY)
+
+Проверка: 9567 + 1085 = 10652 ✅
+            </div>
+        </div>
+    </div>
+
+    <div class="entry">
+        <span class="date-badge">25 февраля 2026</span>
+        <div class="content-block">
+            <h4>Численные методы и округление:</h4>
+            <p>Значения: <code>1216666.6666665326</code>, <code>0.008000000000000007</code></p>
+            
+            <p><strong>Честное округление (Random Error):</strong></p>
+            <div class="log-output">
+4.162 -> 4.16 (остаток: +0.00200)
+4.168 -> 4.17 (остаток: -0.00200)
+4.174 -> 4.17 (остаток: +0.00400)
+4.179 -> 4.18 (остаток: -0.00100)
+            </div>
+
+            <p><strong>Усечение / Truncation (Systematic Bias):</strong></p>
+            <div class="log-output">
+4.162 -> 4.16 (остаток: +0.00200)
+4.168 -> 4.16 (остаток: +0.00800)
+4.174 -> 4.17 (остаток: +0.00400)
+4.179 -> 4.17 (остаток: +0.00900)
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-links">
+        <h3>Основные файлы проекта</h3>
+        <a href="СетьВеодный.pptx" class="file-link">Презентация "Сеть Вводная" (.pptx)</a>
+        <a href="index.html" class="file-link">Проверка кириллицы (.html)</a>
+    </div>
+
+</div>
+
+</body>
+</html>
